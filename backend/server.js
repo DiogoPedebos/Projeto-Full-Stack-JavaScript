@@ -118,7 +118,7 @@ app.post('/api/tarefas', (req, res) => {
         return res.status(400).json({ message: 'Nome do tarefa é obrigatório' });
     }
     const newTarefa = { id: nextIdTarefa++, name: newTarefaName };
-    tarefa.push(newTarefa);
+    tarefas.push(newTarefa);
     res.status(201).json(newTarefa); // 201 Created
 });
 
@@ -130,9 +130,9 @@ app.put('/api/tarefas/:id', (req, res) => {
 
     if (tarefaIndex > -1) {
         tarefas[tarefaIndex].name = updatedName;
-        res.json(tarefa[tarefaIndex]);
+        res.json(tarefas[tarefaIndex]);
     } else {
-        res.status(404).json({ message: 'Tarefa não encontrado' });
+        res.status(404).json({ message: 'Tarefa não encontrada' });
     }
 });
 

@@ -8,8 +8,10 @@ Para iniciar o código:
 
 -----
 
-- Realizar listagem de tarefas com base no modelo padrão de itens que gerou o código
+- Alterar os atributos do objeto tarefa para: 
+    título;
+    descrição;
+    status (pendente, em andamento, concluída); 
+    data de criação;
+    data de conclusão.
 
-
-link de vídeo no youtube explicando o conceito de useState
-https://www.youtube.com/watch?v=mY9MLdifqe0
