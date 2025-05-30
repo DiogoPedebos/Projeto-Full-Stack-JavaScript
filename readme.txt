@@ -1,3 +1,5 @@
+------ Projeto para gerência de Tarefas ------- 
+-----------------------------------------------
 Para iniciar o código:
 
     abra a pasta backend no bash e inicie com:
@@ -6,7 +8,7 @@ Para iniciar o código:
     abra a pasta frontend no bash e inicie com:
         npm start
 
------
+-----------------------------------------------
 
 - Alterar os atributos do objeto tarefa para: 
     título;
