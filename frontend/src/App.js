@@ -39,7 +39,7 @@ function App() {
   // Função para iniciar a edição de uma tarefa
   const startEditing = (tarefa) => {
     setEditingTarefa(tarefa);
-    setNewTarefaName(tarefa.name);
+    setEditedTarefaName(tarefa.name);
   };
 
   // Função para cancelar a edição
