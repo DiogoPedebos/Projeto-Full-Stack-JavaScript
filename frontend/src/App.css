@@ -1,7 +1,6 @@
-/* frontend/src/App.css */
+frontend/src/App.css
 .App {
   text-align: center;
-  margin-top: 50px;
   font-family: sans-serif;
 }
 
@@ -17,14 +16,14 @@
   padding: 20px;
 }
 
-input {
+.App input {
   padding: 8px;
   margin: 10px;
   border-radius: 4px;
   border: 1px solid #ccc;
 }
 
-button {
+.App button {
   padding: 8px 15px;
   margin: 5px;
   border: none;
@@ -35,23 +34,9 @@ button {
   font-weight: bold;
 }
 
-button:hover {
+.App button:hover {
   background-color: #4dc2ea;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  width: 80%;
-  max-width: 500px;
-}
 
-li {
-  background-color: #3a3f47;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+

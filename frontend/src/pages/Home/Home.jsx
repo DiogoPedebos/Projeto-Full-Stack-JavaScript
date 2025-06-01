@@ -1,12 +1,12 @@
-// frontend/src/App.js
 import React, { useState, useEffect } from 'react';
+import Navbar from '../../components/navbar/navbar';
+import './style.css'
 import axios from 'axios';
-import './App.css'; // Opcional: para estilos básicos
 
 // Define a URL base da sua API
 const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
-function App() {  
+function Home() {
 
   const [tarefas, setTarefas] = useState([]);
   const [newTarefaName, setNewTarefaName] = useState([]);
@@ -28,7 +28,7 @@ function App() {
   // Função para adicionar uma nova tarefa
   const addTarefa = async () => {
     try {
-      const response = await axios.post(`${API_BASE_URL}/tarefas`, {name: newTarefaName});
+      const response = await axios.post(`${API_BASE_URL}/tarefas`, { name: newTarefaName });
       setTarefas([...tarefas, response.data]);
       setNewTarefaName('');
     } catch (error) {
@@ -76,12 +76,15 @@ function App() {
   }, []); // Array de dependências vazio: executa uma vez na montagem
 
 
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Minha Lista de tarefas (React + Node.js)</h1>
 
+    <div className="App">
+      <div>
+        <>
+          <Navbar />
+        </>
+      </div>
+      <header className="App-header">
         {/* Formulário para Adicionar tarefa */}
         <div>
           <input
@@ -98,16 +101,16 @@ function App() {
         <h2>Tarefas:</h2>
         <ul>
           {tarefas.map((tarefa) => (
-            <li key={tarefa.id}>
+            <li className='lista' key={tarefa.id}>
               {editingTarefa && editingTarefa.id === tarefa.id ? (
                 <>
                   <input
                     type="text"
                     value={editedTarefaName}
                     onChange={(e) => setEditedTarefaName(e.target.value)}
-                    />
-                    <button onClick={() => updateTarefa(tarefa.id)}>Salvar</button>
-                    <button onClick={cancelEditing}>Cancelar</button>
+                  />
+                  <button onClick={() => updateTarefa(tarefa.id)}>Salvar</button>
+                  <button onClick={cancelEditing}>Cancelar</button>
                 </>
               ) : (
                 <>
@@ -120,11 +123,10 @@ function App() {
           ))}
         </ul>
 
-
-
       </header>
+
     </div>
   );
 }
 
-export default App;
+export default Home;
