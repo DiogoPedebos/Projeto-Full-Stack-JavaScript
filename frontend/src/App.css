@@ -1,42 +1,7 @@
-frontend/src/App.css
-.App {
-  text-align: center;
-  font-family: sans-serif;
-}
-
-.App-header {
+body {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  padding: 20px;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
 }
-
-.App input {
-  padding: 8px;
-  margin: 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-.App button {
-  padding: 8px 15px;
-  margin: 5px;
-  border: none;
-  border-radius: 4px;
-  background-color: #61dafb;
-  color: #282c34;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.App button:hover {
-  background-color: #4dc2ea;
-}
-
-
-

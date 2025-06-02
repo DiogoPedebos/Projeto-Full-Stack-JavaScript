@@ -1,10 +1,9 @@
+
 import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
-import './index.css';
-import Navbar from './components/navbar/navbar';
+import {createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 import About from './pages/About/About';
-import {createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {path:"/",element:<App/>},
